@@ -13,11 +13,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.qa.TrainingManagerAPI.persistence.domain.CV;
-import com.qa.TrainingManagerAPI.persistence.domain.TrainingManager;
 import com.qa.TrainingManagerAPI.rest.Endpoint;
 import com.qa.TrainingManagerAPI.service.TrainingManagerService;
 import com.qa.TrainingManagerAPI.util.Constants;
+import com.qa.persistence.domain.CV;
+import com.qa.persistence.domain.TrainingManager;
 
 
 @RunWith(MockitoJUnitRunner.class)

@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qa.TrainingManagerAPI.persistence.domain.TrainingManager;
 import com.qa.TrainingManagerAPI.service.ITrainingManagerService;
+import com.qa.persistence.domain.TrainingManager;
 
 @RequestMapping("${URL.base}")
 @RestController
@@ -25,8 +25,8 @@ public class Endpoint {
 	private ITrainingManagerService service;
 
 	@PostMapping("${URL.method.TrainingManager.add}")
-	public String createTrainingManager(@RequestBody TrainingManager trainingManager, @RequestBody String password) {
-		return service.create(trainingManager, password);
+	public String createTrainingManager(@RequestBody TrainingManager trainingManager) {
+		return service.create(trainingManager);
 	}
 
 	@GetMapping("${URL.method.TrainingManager.getByUserName}/{userName}")
@@ -39,7 +39,7 @@ public class Endpoint {
 		return service.getAll();
 	}
 
-	@PutMapping("${URL.method.updateTrainingManager}/{userName}")
+	@PutMapping("${URL.method.TrainingManager.update}/{userName}")
 	public String updateTrainingManager(@PathVariable("userName") String username,
 			@RequestBody TrainingManager trainingManager) {
 		return service.update(username, trainingManager);

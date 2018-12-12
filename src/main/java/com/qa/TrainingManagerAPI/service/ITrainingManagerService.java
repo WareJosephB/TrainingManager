@@ -2,11 +2,11 @@ package com.qa.TrainingManagerAPI.service;
 
 import java.util.Optional;
 
-import com.qa.TrainingManagerAPI.persistence.domain.TrainingManager;
+import com.qa.persistence.domain.TrainingManager;
 
 public interface ITrainingManagerService {
 
-	String create(TrainingManager trainee, String password);
+	String create(TrainingManager trainee);
 
 	Optional<TrainingManager> get(String username);
 

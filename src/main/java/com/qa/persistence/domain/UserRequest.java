@@ -1,4 +1,4 @@
-package com.qa.TrainingManagerAPI.persistence.domain;
+package com.qa.persistence.domain;
 
 public class UserRequest {
 
@@ -8,6 +8,14 @@ public class UserRequest {
 
 	private requestType howToAct;
 	private User userToAddOrUpdate;
+
+	public UserRequest(User user) {
+		this.setUserToAddOrUpdate(user);
+	}
+
+	public UserRequest() {
+
+	}
 
 	public requestType getHowToAct() {
 		return howToAct;
