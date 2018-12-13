@@ -20,4 +20,6 @@ public class Constants {
 
 	public static final String REQUEST_QUEUED_MESSAGE = "Request placed on queue succesfully";
 
+	public static final String USER_ADDED_MESSAGE = "User added succesfully";
+
 }
