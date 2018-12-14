@@ -29,8 +29,8 @@ public class Endpoint {
 		return service.create(trainingManager);
 	}
 
-	@GetMapping("${URL.method.TrainingManager.getByUserName}/{userName}")
-	public Optional<TrainingManager> getTrainingManager(@PathVariable("userName") String username) {
+	@GetMapping("${URL.method.TrainingManager.getByUserName}/{username}")
+	public Optional<TrainingManager> getTrainingManager(@PathVariable("username") String username) {
 		return service.get(username);
 	}
 
@@ -39,15 +39,15 @@ public class Endpoint {
 		return service.getAll();
 	}
 
-	@PutMapping("${URL.method.TrainingManager.update}/{userName}")
-	public String updateTrainingManager(@PathVariable("userName") String username,
+	@PutMapping("${URL.method.TrainingManager.update}/{username}")
+	public String updateTrainingManager(@PathVariable("username") String username,
 			@RequestBody TrainingManager trainingManager) {
 		return service.update(username, trainingManager);
 	}
 
-	@DeleteMapping("${URL.method.TrainingManager.delete}/{userName}")
-	public String deleteTrainingManager(@PathVariable("userName") String userName) {
-		return service.delete(userName);
+	@DeleteMapping("${URL.method.TrainingManager.delete}/{username}")
+	public String deleteTrainingManager(@PathVariable("username") String username) {
+		return service.delete(username);
 	}
 
 }
